@@ -2,73 +2,115 @@
 <html lang="de">
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>CO2 Footprint</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
         <link rel="stylesheet" href="footprint.css">
     </head> 
     <body>
         <header>
-            <img src="\Screenshot 2024-12-30 155052.png" width="100" alt="CO2 Footprint">
-            <h1>Willkommen auf unserer Webseite </h1>
+            <!--Titel und Logo -->
+            <h1> <span class="badge"><img src="/Screenshot 2024-12-30 155052.png" width="100" alt="CO2 Footprint"></span>Green Step</h1>
+            <!--Navigation-->
             <nav>
-                <ul>
-                    <li>
+                <ul class="text-end">
+                    <li class="d-inline">
                         <form>
                             <input type="text" name="suche" placeholder="Ich suche..">
                         </form>
                     </li>
+                    <li class="d-inline">
+                        <a href="http://www.instagram.com/greenstep"> Instagram </a>
+                    </li>
+                    <li class="d-inline">
+                        <a href="http://www.facebook.com/greenstep"> Facebook </a>
+                    </li>
+                    <li class="d-inline">
+                        <a href="contact.html"> Kontakt </a>
+                    </li>
                 </ul>
             </nav>
-        </header>  
-        <nav>
-            <ul>
-                <li><a href="home.html"> Home </a> </li>
-                <li><a href="Services.html"> Leistungen </a> </li> 
-                <li><a href="teilnehmer.html"> Teilnehmer </a> </li> 
-                <li><a href="about.html"> Über uns </a> </li>
-            </ul>
-        </nav>
+    </header> 
         <main>
-            <section>
-                <h2>Wer sind wir?</h2>
-                <p>WIr sind eine gemeinnützige Organisation und beschäftigen uns mit der Umwelt und Klimawandel</p>
-            </section>
-            <section>
-                <h2>Was ist unser Ziel?</h2>
-                <p>Wir wollen alle Interessenten darüber informieren, welche Unternehmen und Länder wie viel CO2 jährlich emittieren</p>
-            </section>
-            <section>
-                <h2>Welche Leistungen bieten wir an?</h2>
-                <p>Wir beraten Unternehmen und Länder, wie sie den CO2 Emition verringen können</p>
-            </section>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Land</th>
-                        <th>Unternehmen</th>
-                        <th>CO2 Emissionen</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Deutschland</td>
-                        <td>Opel</td>
-                        <td>353</td>
-                    </tr>
-                    <tr>
-                        <td>USA</td>
-                        <td>Apple</td>
-                        <td>2568</td>
-                    </tr>
-                    <tr>
-                        <td>UK</td>
-                        <td>Smiths Group</td>
-                        <td>3890</td>
-                    </tr>
-                </tbody>
-            </table>
+            <nav>
+                <!--Seitennavigation-->
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-item" href="home.html"> Home </a> 
+                    </li>
+                    <li>
+                        <a class="nav-item" href="Services.html"> Leistungen </a> 
+                    </li> 
+                    <li>
+                        <a class="nav-item" href="teilnehmer.html"> Teilnehmer </a> 
+                    </li> 
+                    <li>
+                        <a class="nav-item" href="about.html"> Über uns </a> 
+                    </li>
+                </ul>
+            </nav>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12"> 
+                <h1 > Willkommen, Klimafreunde! </h1>
+                    </div>
+                <!--Textfelder-->
+                    <div class="col-12"> 
+                        <section>
+                            <h2>Was ist CO2 Footprint?</h2>
+                            <p>Der CO2 Footprint ist ein Maß für die Menge an CO2, die durch menschliche Aktivitäten freigesetzt wird. Er wird in Tonnen pro Jahr gemessen.</p>
+                            <h2>Was ist CO2?</h2>
+                            <p>CO2 ist ein Treibhausgas, das durch die Verbrennung fossiler Brennstoffe wie Kohle, Öl und Gas entsteht. Es trägt zum Klimawandel bei.</p>
+                            <h2>Wer sind wir?</h2>
+                            <p>WIr sind eine gemeinnützige Organisation und beschäftigen uns mit der Umwelt und Klimawandel</p>
+                        </section>
+                    </div>
+                    <div class="col-12">
+                        <section>
+                            <h2>Was ist unser Ziel?</h2>
+                            <p>Wir wollen alle Interessenten darüber informieren, welche Unternehmen und Länder wie viel CO2 jährlich emittieren</p>
+                        </section>
+                    </div>
+                    <div class="col-12 mt-4">
+                        <section>
+                            <h2>Welche Leistungen bieten wir an?</h2>
+                            <p>Wir beraten Unternehmen und Länder, wie sie den CO2 Emition verringen können</p>
+                        </section>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table table-bordered border-success table-striped table-hover">
+                            <!--Tabelle-->
+                            <thead>
+                                <tr>
+                                    <th>Land</th>
+                                    <th>Unternehmen</th>
+                                    <th>CO2 Emissionen</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Deutschland</td>
+                                    <td>Opel</td>
+                                    <td>353</td>
+                                </tr>
+                                <tr>
+                                    <td>USA</td>
+                                    <td>Apple</td>
+                                    <td>2568</td>
+                                </tr>
+                                <tr>
+                                    <td>UK</td>
+                                    <td>Smiths Group</td>
+                                    <td>3890</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
         </main>
         <footer>
+            <!--Fußzeile-->
             <p>Rechtliche Hinweise:</p>
             <p>Es gelten AGB und DSVGO</p>
         </footer>
