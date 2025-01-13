@@ -10,57 +10,63 @@
     <body>
         <header>
             <!--Titel und Logo -->
+            <div class="d-inline-block">
             <h1> <span class="badge"><img src="Screenshot 2024-12-30 155052.png" width="100" alt="CO2 Footprint"></span>Green Step</h1>
+            </div>
             <!--Navigation-->
+            
             <nav>
                 <ul class="text-end">
-                    <li class="d-inline">
+                    <li class="d-inline-block">
                         <form>
                             <input type="text" name="suche" placeholder="Ich suche..">
                         </form>
                     </li>
-                    <li class="d-inline">
+                    <li class="d-inline-block">
                         <a href="http://www.instagram.com/greenstep"> Instagram </a>
                     </li>
-                    <li class="d-inline">
+                    <li class="d-inline-block">
                         <a href="http://www.facebook.com/greenstep"> Facebook </a>
                     </li>
-                    <li class="d-inline">
+                    <li class="d-inline-block">
                         <a href="contact.html"> Kontakt </a>
                     </li>
                 </ul>
             </nav>
+        </div>
     </header> 
         <main>
-            <nav>
-                <!--Seitennavigation-->
-                <ul class="nav flex-column">
-                    <li class="nav-item">
-                        <a class="nav-item" href="home.html"> Home </a> 
-                    </li>
-                    <li>
-                        <a class="nav-item" href="Services.html"> Leistungen </a> 
-                    </li> 
-                    <li>
-                        <a class="nav-item" href="teilnehmer.html"> Teilnehmer </a> 
-                    </li> 
-                    <li>
-                        <a class="nav-item" href="about.html"> Über uns </a> 
-                    </li>
-                </ul>
-            </nav>
-            <div class="container">
-                <div class="row">
-                    <div class="col-12"> 
-                <h1 > Willkommen, Klimafreunde! </h1>
+               <!--Seitennavigation-->
+                    <nav class="custom-nav"> 
+                        <button class="nav-toggle d-sm-none" onclick="toggleNav()">
+                            <span>☰</span>
+                        </button>   
+                        <div class="nav-menu" id="nav-menu">
+                        <ul>
+                            <li>
+                                <a class="nav-link" href="home.html"> Home </a> 
+                            </li>
+                            <li>
+                                <a class="nav-link" href="Services.html"> Leistungen </a> 
+                            </li> 
+                            <li>
+                                <a class="nav-link" href="teilnehmer.html"> Teilnehmer </a> 
+                            </li> 
+                            <li>
+                                <a class="nav-link" href="about.html"> Über uns </a> 
+                            </li>
+                        </ul>
                     </div>
-                <!--Textfelder-->
+                    </nav>
+                <div class="container">
+                
+                    <div class="row">
+                    <div class="col-12"> 
+                <h1 class="display-3 text-center text-success fw-bold" > Willkommen, Klimafreunde! </h1>
+                    </div>
+                
                     <div class="col-12"> 
                         <section>
-                            <h2>Was ist CO2 Footprint?</h2>
-                            <p>Der CO2 Footprint ist ein Maß für die Menge an CO2, die durch menschliche Aktivitäten freigesetzt wird. Er wird in Tonnen pro Jahr gemessen.</p>
-                            <h2>Was ist CO2?</h2>
-                            <p>CO2 ist ein Treibhausgas, das durch die Verbrennung fossiler Brennstoffe wie Kohle, Öl und Gas entsteht. Es trägt zum Klimawandel bei.</p>
                             <h2>Wer sind wir?</h2>
                             <p>WIr sind eine gemeinnützige Organisation und beschäftigen uns mit der Umwelt und Klimawandel</p>
                         </section>
@@ -110,8 +116,11 @@
             </div>
         </main>
         <footer>
+            <div class="sticky-bottom">
             <!--Fußzeile-->
-            <p>Rechtliche Hinweise:</p>
-            <p>Es gelten AGB und DSVGO</p>
+                <p>Rechtliche Hinweise: Es gelten AGB und DSVGO. 2025.</p>
+            </div>  
         </footer>
+        <script src="footprint.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     </body>
