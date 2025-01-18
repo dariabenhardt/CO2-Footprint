@@ -8,89 +8,109 @@
         <link rel="stylesheet" href="footprint.css">
     </head> 
     <body>
-        <header>
+        <header class= "px-4 py-3">
             <!--Titel und Logo -->
-            <div class="d-inline-block">
-            <h1> <span class="badge"><img src="Screenshot 2024-12-30 155052.png" width="100" alt="CO2 Footprint"></span>Green Step</h1>
+                <div class="row g-3">
+                    <div class="col-12 col-md-4">
+                        <div class="d-flex align-items-center">
+                            <span class="badge"><img src="/Screenshot 2024-12-30 155052.png" width="100" alt="CO2 Footprint">
+                            </span>
+                            <h1 class= "m-0">Green Step</h1>
+                        </div>
+                    </div>
+            <!--Suchfeld-->
+            <div class="col-12 col-md-8">
+                <div class="right-content-wrapper">
+                <div class="search-container"> 
+                    <form class="w-100 w-md-75 pe-4">
+                        <input type="text" name="suche" placeholder="Ich suche.." class="form-control">
+                    </form>
+                </div>
+                <!--Lokale Links-->
+                <div class="d-flex flex-wrap justify-content-end align-items-center gap-3"> 
+                           <nav>
+                                <ul class="list-unstyled d-flex flex-wrap  gap-3 m-0">
+                                    <li>
+                                        <a href="http://www.instagram.com/greenstep" class="text-decoration-none"> Instagram </a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.facebook.com/greenstep" class="text-decoration-none"> Facebook </a>
+                                    </li>
+                                    <li>
+                                        <a href="contact.html" class="text-decoration-none"> Kontakt </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <!--Sprachen-->
+                            <div id="app">
+        
+                                    <select v-model="language" class="form-select" aria-label="Sprache:">
+                                            <option value="" disabled selected>Wählen Sie die Sprache aus:</option>
+                                            <option value="Deutsch">Deutsch</option>
+                                            <option value="English">English</option>
+                                            <option value="Arabisch">العربية(Arabisch)</option>
+                                            <option value="Hebräisch">עברית (Hebräisch)</option>
+                                    </select>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
             </div>
-            <!--Navigation-->
-            
-            <nav>
-                <ul class="text-end">
-                    <li class="d-inline-block">
-                        <form>
-                            <input type="text" name="suche" placeholder="Ich suche..">
-                        </form>
-                    </li>
-                    <li class="d-inline-block">
-                        <a href="http://www.instagram.com/greenstep"> Instagram </a>
-                    </li>
-                    <li class="d-inline-block">
-                        <a href="http://www.facebook.com/greenstep"> Facebook </a>
-                    </li>
-                    <li class="d-inline-block">
-                        <a href="contact.html"> Kontakt </a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
+            <!--Vue.js-->
+            <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     </header> 
         <main>
                <!--Seitennavigation-->
-                    <nav class="custom-nav"> 
-                        <button class="nav-toggle d-sm-none" onclick="toggleNav()">
-                            <span>☰</span>
-                        </button>   
-                        <div class="nav-menu" id="nav-menu">
+        <div class="content-wrapper content-ltr">
+            <nav class="custom-nav" v-bind:class="direction === 'rtl' ? 'menu-rtl' : 'menu-ltr'">    
+                <button class="nav-toggle d-sm-none" onclick="toggleNav()">
+                    <span>☰</span>
+                </button>   
+                    <div class="nav-menu" id="nav-menu">
                         <ul>
-                            <li>
-                                <a class="nav-link" href="home.html"> Home </a> 
-                            </li>
-                            <li>
-                                <a class="nav-link" href="Services.html"> Leistungen </a> 
-                            </li> 
-                            <li>
-                                <a class="nav-link" href="teilnehmer.html"> Teilnehmer </a> 
-                            </li> 
-                            <li>
-                                <a class="nav-link" href="about.html"> Über uns </a> 
-                            </li>
+                            <li><a class="nav-link" href="home.html">Home</a></li>
+                            <li><a class="nav-link" href="Services.html">Leistungen</a></li>
+                            <li><a class="nav-link" href="teilnehmer.html">Teilnehmer</a></li>
+                            <li><a class="nav-link" href="about.html">Über uns</a></li>
                         </ul>
                     </div>
-                    </nav>
-                <div class="container">
-                
+        </div>
+            </nav>
+                <div class="container-fluid">              
                     <div class="row">
-                    <div class="col-12"> 
-                <h1 class="display-3 text-center text-success fw-bold" > Willkommen, Klimafreunde! </h1>
-                    </div>
+                        <div class="col-12"> 
+                            <h1 class="display-3 text-center text-success fw-bold" > Willkommen, Klimafreunde! </h1>
+                        </div>
                 
                     <div class="col-12"> 
                         <section>
-                            <h2>Wer sind wir?</h2>
-                            <p>WIr sind eine gemeinnützige Organisation und beschäftigen uns mit der Umwelt und Klimawandel</p>
+                            <h2 class="display-6">Wer sind wir?</h2>
+                            <p class="text-start">WIr sind eine gemeinnützige Organisation und beschäftigen uns mit der Umwelt und Klimawandel</p>
                         </section>
                     </div>
                     <div class="col-12">
                         <section>
-                            <h2>Was ist unser Ziel?</h2>
+                            <h2 class="display-6">Was ist unser Ziel?</h2>
                             <p>Wir wollen alle Interessenten darüber informieren, welche Unternehmen und Länder wie viel CO2 jährlich emittieren</p>
                         </section>
                     </div>
-                    <div class="col-12 mt-4">
+                    <div class="col-12">
                         <section>
-                            <h2>Welche Leistungen bieten wir an?</h2>
+                            <h2 class="display-6">Welche Leistungen bieten wir an?</h2>
                             <p>Wir beraten Unternehmen und Länder, wie sie den CO2 Emition verringen können</p>
                         </section>
                     </div>
-                    <div class="table-responsive">
+        
+                    <div class="table-responsive-lg">
                         <table class="table table-bordered border-success table-striped table-hover">
                             <!--Tabelle-->
-                            <thead>
+                            <thead class="table-success">
                                 <tr>
-                                    <th>Land</th>
-                                    <th>Unternehmen</th>
-                                    <th>CO2 Emissionen</th>
+                                    <th scope="col">Land</th>
+                                    <th scope="col">Unternehmen</th>
+                                    <th scope="col">CO2 Emissionen</th>
                                 </tr>
                             </thead>
                             <tbody>
